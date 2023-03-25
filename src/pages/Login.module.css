@@ -1,0 +1,174 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+}
+
+.img__container {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img__container > img:last-child {
+  object-fit: contain;
+  width: 100%;
+  max-width: 1600px;
+}
+
+.logo__and__name {
+  position: absolute;
+  top: 10vh;
+  left: 10vh;
+}
+
+.login__ui {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(6.5vw + 0.01rem);
+  padding-right: calc(6.5vw + 0.01rem);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+}
+
+.header h1 {
+  font-size: clamp(1.5rem, 2.5vw + 0.1rem, 4rem);
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.header h2 {
+  font-size: 20px;
+  font-size: clamp(0.75rem, 1.25vw + 0.05rem, 2rem);
+  font-weight: 400;
+  color: rgba(33, 63, 125, 1);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 70%;
+}
+
+.email__input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  font-size: 14px;
+  font-size: clamp(0.75rem, 0.86vw + 0.05rem, 2rem);
+  background-color: transparent;
+  border-radius: 5px;
+  animation: moveUp 0.5s ease-in-out forwards;
+}
+
+.email__input:focus,
+.email__input:active {
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  outline: none;
+}
+
+.input__container {
+  width: 100%;
+  border: 2px solid rgba(84, 95, 125, 0.15);
+  display: flex;
+  background-color: transparent;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0;
+  animation: moveUp 0.5s 0.1s ease-in-out forwards;
+}
+
+.input__container > input {
+  flex: 1;
+  padding: 1rem;
+  font-size: 14px;
+  font-size: clamp(0.75rem, 0.86vw + 0.05rem, 2rem);
+  border: none;
+  background-color: transparent;
+  min-width: 100px;
+}
+
+.input__container > button {
+  border: none;
+  flex: 0;
+  color: var(--green);
+  margin-right: 1rem;
+  font-size: 12px;
+  font-size: clamp(0.75rem, 0.7vw + 0.05rem, 2rem);
+  font-weight: 400;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.input__container > input:focus,
+.input__container > input:active {
+  border: none;
+  outline: none;
+}
+
+.forgot__password {
+  color: var(--green);
+  background-color: transparent;
+  border: none;
+  width: fit-content;
+  font-size: 12px;
+  font-size: clamp(0.75rem, 0.7vw + 0.05rem, 2rem);
+  font-weight: 400;
+}
+
+.form > button:last-child {
+  border-radius: 8px;
+  opacity: 0;
+  animation: moveUp 0.5s 0.2s ease-in-out forwards;
+}
+
+.button__text {
+  font-weight: 600;
+  font-size: 14px;
+  font-size: clamp(0.75rem, 0.86vw + 0.05rem, 2rem);
+}
+
+@media (max-width: 500px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .img__container {
+    width: 100%;
+  }
+
+  .logo__and__name {
+    position: absolute;
+    top: 3vh;
+    left: 3vh;
+  }
+
+  .login__ui {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

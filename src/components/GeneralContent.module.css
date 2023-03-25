@@ -1,0 +1,57 @@
+.container {
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.section {
+  padding-block: 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--blue-opacity);
+}
+
+.section:last-child {
+  border: none;
+}
+
+.header h2 {
+  color: var(--blue);
+  font-size: 16px;
+  font-size: 500;
+}
+
+.section > div {
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(180px, 100%), calc(100% / 8))
+  );
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  color: var(--grey);
+}
+
+.key {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.value {
+  font-weight: 500;
+  font-size: 16px;
+  overflow-wrap: break-word;
+}
+
+.section:nth-child(2) > div {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(230px, 100%), calc((100%) / 7))
+  );
+}

@@ -1,0 +1,42 @@
+.table {
+  table-layout: fixed;
+  padding: 30px;
+  color: var(--blue);
+  background-color: #fff;
+  border-radius: 4px;
+  width: 100%;
+  min-width: 1400px;
+  position: relative;
+  /* height: fit-content; */
+}
+
+.table tr > th {
+  text-align: left;
+  padding-bottom: 1rem;
+  cursor: pointer;
+}
+
+.table tr > th > div {
+  display: flex;
+  gap: 10px;
+}
+
+.organization {
+  width: 16%;
+}
+.username {
+  width: 16%;
+}
+.email {
+  width: 23%;
+}
+.phone__number {
+  width: 16%;
+}
+.date {
+  width: 20%;
+}
+.status {
+  width: 9%;
+  /* background-color: red; */
+}

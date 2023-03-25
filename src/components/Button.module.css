@@ -1,0 +1,39 @@
+.fullButton {
+  padding: calc(1em - 3px);
+  background-color: var(--green);
+  border: none;
+  /* border-radius: 8px; */
+  color: #fff;
+}
+
+.hollowButton {
+  padding: calc(1em - 3px);
+  border: 1px solid;
+  background-color: transparent;
+  /* border-radius: 8px; */
+}
+
+.hollowButton.green {
+  color: var(--green);
+  border-color: var(--green);
+}
+.hollowButton.blue {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.hollowButton.yellow {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+.hollowButton.grey {
+  color: var(--grey);
+  border-color: var(--grey);
+}
+.hollowButton.yellow {
+  color: var(--yellow);
+  border-color: var(--yellow);
+}
+.hollowButton.red {
+  color: var(--red);
+  border-color: var(--red);
+}
