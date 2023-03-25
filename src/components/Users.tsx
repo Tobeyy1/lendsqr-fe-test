@@ -225,7 +225,7 @@ const Users = () => {
         setIsLoading(true);
         setError(false);
         const response = await fetch(
-          "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users "
+          "https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users"
         );
         const data = await response.json();
         // console.log(data);
@@ -244,13 +244,13 @@ const Users = () => {
     let usersData: UserProfile[] = JSON.parse(
       localStorage.getItem("users") || "[]"
     );
-    if (usersData) {
+    if (usersData.length > 0) {
       setUsersData(usersData);
       setFilteredUsersData(usersData);
       console.log("Local Storage", usersData);
       setIsLoading(false);
     }
-    if (!usersData) {
+    if (usersData.length === 0) {
       fetchData();
     }
   }, []);
